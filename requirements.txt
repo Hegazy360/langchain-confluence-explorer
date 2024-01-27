@@ -1,0 +1,12 @@
+langchain==0.1.4
+PyPDF2==3.0.1
+python-dotenv==1.0.1
+streamlit==1.30.0
+faiss-cpu==1.7.4
+altair<5
+openai==1.10.0
+tiktoken==0.5.2
+langchain-community==0.0.16
+langchain_openai==0.0.5
+urllib3==1.26.6
+atlassian-python-api==3.41.9
