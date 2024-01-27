@@ -1,19 +1,30 @@
-# LangChain PDF Explorer
+# LangChain Confluence Explorer
 
-This project is a Streamlit application that allows users to upload a PDF, ask a question about the content of the PDF, and get an answer based on the content of the PDF. The application uses OpenAI to generate embeddings for the text in the PDF and to answer the user's question.
+## Overview
+LangChain Confluence Explorer is an innovative tool designed to enhance the way we interact with technical documentation stored in Confluence. Built using Python and Streamlit, this application leverages the power of LangChain, a library for building language model chains, to provide an intuitive interface for querying and understanding complex documentation.
 
-<img width="1000" alt="Screenshot 2024-01-26 at 14 20 13" src="https://github.com/Hegazy360/langchain-pdf-explorer/assets/13141632/d526c674-8340-483d-87be-b404e1aaa3a4">
+## Features
+- **Confluence Integration**: Seamlessly fetches documents from Confluence for processing.
+- **LangChain Integration**: Utilizes LangChain for efficient language processing and question answering.
+- **FAISS Knowledge Base**: Employs FAISS (Facebook AI Similarity Search) to create a searchable knowledge base from Confluence documents.
+- **OpenAI Embeddings**: Leverages OpenAI's embeddings to understand and process text data.
+- **Session State Variables**: Uses Streamlit’s session state to maintain data across reruns, enhancing user experience and efficiency.
+- **Interactive UI**: Streamlit-based interface for fetching data and querying the knowledge base.
 
+## How It Works
+1. **Fetching Confluence Data**: The application connects to a Confluence instance and fetches documents based on user input.
+2. **Processing Data**: Text data from Confluence documents are split into manageable chunks and processed using OpenAI embeddings.
+3. **Building the Knowledge Base**: A FAISS index is created from the processed chunks, forming a searchable knowledge base.
+4. **User Interaction**: Users can input queries related to the fetched documents, and the application searches the knowledge base for relevant information.
+5. **Displaying Answers**: The application displays the most relevant information from the knowledge base in response to user queries.
 
-
-## Dependencies
-
-The project uses the following Python libraries:
-
-- streamlit
-- PyPDF2
-- langchain
-- OpenAI LLM
+## Technologies Used
+- **Python**: The core language used for development.
+- **Streamlit**: For creating the web application.
+- **LangChain**: For building language model chains.
+- **Confluence API**: For fetching documentation from Confluence.
+- **OpenAI Embeddings**: For text processing and embeddings.
+- **FAISS (Facebook AI Similarity Search)**: For creating the searchable knowledge base.
 
 ## How to Run
 
@@ -22,10 +33,4 @@ The project uses the following Python libraries:
 3. Set the necessary environment variables using a `.env` file.
 4. Run the Streamlit application using the command `streamlit run app.py`.
 
-## Code Structure
 
-The `app.py` file contains the main function of the application. It first loads the environment variables, then sets up the Streamlit application. It allows the user to upload a PDF file, then reads the file and extracts the text from it. The text is split into chunks, and embeddings are generated for each chunk. The user can then ask a question about the PDF, and the application will search for similar documents in the knowledge base and use a question answering chain to generate a response.
-
-## Future Work
-
-Future improvements could include better handling of PDF files with complex layouts, support for multiple languages, and improvements to the question answering algorithm.
