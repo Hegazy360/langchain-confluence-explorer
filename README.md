@@ -1,5 +1,11 @@
 # LangChain Confluence Explorer
 
+<img width="840" alt="Screenshot 2024-01-27 at 21 57 51" src="https://github.com/Hegazy360/langchain-confluence-explorer/assets/13141632/84ae6ca1-4e93-4978-ad39-002174789f26">
+<br/>
+<br/>
+<img width="837" alt="Screenshot 2024-01-27 at 21 58 42" src="https://github.com/Hegazy360/langchain-confluence-explorer/assets/13141632/f6f9c182-9e9b-4706-99fc-0961c8840a68">
+
+
 ## Overview
 LangChain Confluence Explorer is an innovative tool designed to enhance the way we interact with technical documentation stored in Confluence. Built using Python and Streamlit, this application leverages the power of LangChain, a library for building language model chains, to provide an intuitive interface for querying and understanding complex documentation.
 
