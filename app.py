@@ -10,7 +10,6 @@ from langchain_community.callbacks import get_openai_callback
 from langchain_community.document_loaders import ConfluenceLoader
 from langsmith.run_helpers import traceable
 
-
 def get_confluence_data():
     confluence_api_key = os.getenv('CONFLUENCE_API_KEY')
     confluence_username = os.getenv('CONFLUENCE_USERNAME')
@@ -20,10 +19,11 @@ def get_confluence_data():
         url=confluence_url, username=confluence_username, api_key=confluence_api_key)
 
     documents = loader.load(
-        space_key="KB", include_attachments=False, limit=5, max_pages=10
+        space_key="SCH", include_attachments=False, limit=5, max_pages=10
     )
 
     return documents
+
 
 @traceable(run_type="embedding")
 def set_document_embeddings(documents):
@@ -44,8 +44,7 @@ def set_document_embeddings(documents):
 
 
 def main():
-    # Load environment variables
-    load_dotenv()
+    load_dotenv(override=True)
 
     st.set_page_config(page_title="LangChain Confluence Explorer")
     st.header("LangChain Confluence Explorer")
@@ -81,6 +80,7 @@ def main():
                 st.write(cb)
 
             st.write(response['output_text'])
+
 
 # Run the main function
 if __name__ == '__main__':
