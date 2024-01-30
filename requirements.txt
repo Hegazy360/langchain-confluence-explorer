@@ -10,3 +10,7 @@ langchain-community==0.0.16
 langchain_openai==0.0.5
 urllib3==1.26.6
 atlassian-python-api==3.41.9
+lxml==5.1.0
+pytesseract==0.3.10
+Pillow==10.2.0
+docx2txt==0.8
